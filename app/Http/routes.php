@@ -10,10 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +25,24 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+/*
+ *
+ * api
+ *
+ *
+ * */
+// 接管路由
+$api = app('Dingo\Api\Routing\Router');
+$api->version('v1', function ($api) {
+    $api->group(['namespace' => 'App\Http\Controllers\Api\V1'], function ($api) {
+        $api->get('/hello/', 'UserController@index');
+    });
+});
+/*
+ * reg
+ * */
+$api->post('/users/{user_name}/register','UserController@register');

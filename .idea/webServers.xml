@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5b7a8a14-6721-49cb-9b87-2fe5c7b7850d" name="blfly" url="http://blfly.com">
+        <fileTransfer host="blfly.com" port="21" rootFolder="/home/wwwroot/blfly.com">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
