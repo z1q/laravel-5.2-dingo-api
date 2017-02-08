@@ -14,7 +14,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('api', function () {
+    return view('welcome');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -45,7 +47,7 @@ $api->version('v1', function ($api) {
         $api->post('phonereg', 'UserController@phonereg')->name('api.phonereg');
         $api->post('verif', 'UserController@lverif')->name('api.verif');
         $api->post('forget', 'UserController@forget')->name('api.forget');
-        $api->post('index', function () {return "welcome";})->name('api.index');
+        //$api->get('/', function () {return "welcome";})->name('api.index');
     });
 });
 /*

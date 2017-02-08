@@ -1,5 +1,11 @@
 # Laravel PHP Framework
-目前还有一个问题是apache环境下可以正常访问,nginx下则不行
+目前还有一个问题是apache2.4.23环境下可以正常访问,nginx1.8.0下则不行
+
+
+
+
+
+#Api说明
 /*
 两种注册方式,ruser是用户名注册,rphone是手机号注册
 */
@@ -17,8 +23,42 @@ rpassword:
 
 验证/api/verif
 
-## Official Documentation
+## 数据结构
+/*
+待完善
+*/
 
+user:myfollow/我关注的
+     praise总赞
+     logdays打卡
+     status状态
+
+
+goal:user/用户
+     tag/标签
+     category/类别
+     starttime/开始时间
+     endtime/结束时间
+     days/天数
+     private/私密
+     reason/原因
+     degree/难度
+     complete/完成
+     stepnum/步骤数
+     estimate/每天评估
+
+step:starttime     
+     endtime
+     reason
+     degree
+
+
+
+
+
+
+
+---------------------------------------------------------------
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
 ## Contributing
