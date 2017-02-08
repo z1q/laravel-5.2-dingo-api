@@ -1,5 +1,5 @@
 # Laravel PHP Framework
-
+目前还有一个问题是apache环境下可以正常访问,nginx下则不行
 /*
 两种注册方式,ruser是用户名注册,rphone是手机号注册
 */
