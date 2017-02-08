@@ -39,10 +39,14 @@ Route::group(['middleware' => ['web']], function () {
 $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', function ($api) {
     $api->group(['namespace' => 'App\Http\Controllers\Api\V1'], function ($api) {
-        $api->get('/hello/', 'UserController@index');
+        $api->post('login', 'UserController@login')->name('api.login');
+        $api->post('phonelogin', 'UserController@phonelogin')->name('api.phonglogin');
+        $api->post('reg', 'UserController@reg')->name('api.reg');
+        $api->post('phonereg', 'UserController@phonereg')->name('api.phonereg');
+        $api->post('verif', 'UserController@lverif')->name('api.verif');
+        $api->post('forget', 'UserController@forget')->name('api.forget');
     });
 });
 /*
- * reg
+ * reg$api->post('/users/{user_name}/register','UserController@register');
  * */
-$api->post('/users/{user_name}/register','UserController@register');
